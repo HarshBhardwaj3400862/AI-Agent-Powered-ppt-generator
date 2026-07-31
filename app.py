@@ -122,7 +122,7 @@ st.sidebar.image(agent)
 with tab1:
 st.header("GENERATE IMAGE GIVE PROMPT")
 if st.button("click to generate:")
-with st.spinner("RUNNING AGENT):
+with st.spinner("RUNNING AGENT"):
   data = generate_image(user_query)
   st.image(data)
 st.image("Image.Jpeg")
