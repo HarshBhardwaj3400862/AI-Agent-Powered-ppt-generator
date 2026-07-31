@@ -26,15 +26,15 @@ os.environ["TAVILY_API_KEY"] = TAVILY_API_KEY
 ALL_API = [GOOGLE_API_KEY,   GROQ_API_KEY,  TAVILY_API_KEY]
 
 if not all(ALL_API):
-  st.sidebar.error("PASS API-KEYS")
+  st.sidebar.error("PASS API_KEYS")
 
 elif all(ALL_API):
   model = ChatGoogleGenerativeAI(
-  model = "gemini-3.5-flash lite",
-  google_api_key = GOOGLE_API_KEY
-)
+    model = "gemini-3.5-flash lite",
+    google_api_key = GOOGLE_API_KEY
+  )
   st.sidebar.success("API KEYS LOADED SUCCESSFULLY")
-elif any(all_API):
+elif any(ALL_API):
   st.sidebar.info("must pass all api keys")
 
 else:
@@ -75,7 +75,7 @@ def generate_image(img_prompt):
     f.write(content)
 
   from PIL import Image
-  return Image.open("Image.jpeg")
+  return url
 
 # with tabs
 tab1, tab2, tab3 = st.tabs(["GENERATE IMAGE", 
