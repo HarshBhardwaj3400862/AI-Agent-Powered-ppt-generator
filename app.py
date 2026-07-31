@@ -17,13 +17,13 @@ GOOGLE_KEY = st.sidebar.text_input("Google-API",type = "password")
 GROQ_KEY = st.sidebar.text_input("Groq-API",type = "password")
 TAVILY_KEY = st.sidebar.text_input("Tavily-API",type = "password")
 
-os.environ["GOOGLE_API_KEY"] = GOOGLE_KEY
-os.environ["GROQ_API_KEY"] = GROQ_KEY
-os.environ["TAVILY_API_KEY"] = TAVILY_KEY
+os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+os.environ["GROQ_API_KEY"] = GROQ_API_KEY
+os.environ["TAVILY_API_KEY"] = TAVILY_API_KEY
 
 
 
-ALL_API = [GOOGLE_KEY,   GROQ_KEY,  TAVILY_KEY]
+ALL_API = [GOOGLE_API_KEY,   GROQ_API_KEY,  TAVILY_API_KEY]
 
 if not all(ALL_API):
   st.sidebar.error("PASS API-KEYS")
@@ -155,7 +155,7 @@ if all(ALL_API) and user_query:
   
   st.html(code, width = "stretch",
           unsafe_allow_javascript = True)
-  if st.download button(label = "DOWNLOAD PPT",
+  if st.download_button(label = "DOWNLOAD PPT",
                      data = code,
                      file_name = ppt.html
                      mine = 'text/html'):
