@@ -121,7 +121,7 @@ if all(ALL_API) and user_query:
   #==============with tabs======================
   with tab1:
     st.header("GENERATE IMAGE GIVE PROMPT")
-    if st.button("click to generate:")
+    if st.button("click to generate:"):
       with st.spinner("RUNNING AGENT"):
         data = generate_image(user_query)
         st.image(data)
