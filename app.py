@@ -31,7 +31,7 @@ if not all(ALL_API):
 elif any(ALL_API):
   st.sidebar.info("MUST PASS ALL KEYS")
 
-else
+else:
 st.sidebar.success("API KEYS LOADED SUCCESSFULLY")
 # STEP1: MODEL CALL
 model = ChatGoogleGenerativeAI(
