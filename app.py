@@ -109,6 +109,7 @@ def prompt_generator(model,query):
   with open("prompt.txt",'w') as f:
     f.write(final_prompt)
   return final_prompt
+  
 if all(ALL_API) and user_query:
   
   agent = create_agent(
