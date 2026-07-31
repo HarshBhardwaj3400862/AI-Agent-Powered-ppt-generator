@@ -79,7 +79,7 @@ def generate_image(img_prompt):
 
 # with tabs
 tab1, tab2, tab3 = st.tabs(["GENERATE IMAGE", 
-                           "CHECK LATEST NEWS"
+                           "CHECK LATEST NEWS",
                            "GENERATE PPT"])
 
 # detailed prompt generator
