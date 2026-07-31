@@ -116,20 +116,20 @@ if all(ALL_API) and user_query:
             generate_image]
            )
   # ==================display agent====================
-  st.sidebar.image(agent)
+  #st.sidebar.image(agent)
   
   #==============with tabs======================
   with tab1:
     st.header("GENERATE IMAGE GIVE PROMPT")
-    if st.button("click to generate:"):
+    if st.button("click to generate:"): ", key = "generate_img_button"):
       with st.spinner("RUNNING AGENT"):
-        data = generate_image(user_query)
+        data = f"url = https://image.pollinations.ai/{user_query}"
         st.image(data)
-        st.image("Image.Jpeg")
+        
   
   with tab2:
     st.header("CHECK LATEST NEWS")
-    if st.button("FETCH NEWS"):
+    if st.button("FETCH NEWS" , key = "news_button"):
       with st.spinner("RUNNING AGENT.."):
         prompt = """give latest news india or world wide related
         to tech, buisness, jobs, or user requested output
@@ -144,7 +144,7 @@ if all(ALL_API) and user_query:
   
   with tab3:
     st.header("GENERATE PPT")
-    if st.button("CLICK TO GENERATE"):
+    if st.button("CLICK TO GENERATE" , key = "generate_ppt_button"):
       with st.spinner("RUNNING AGENT.."):
         final_prompt = prompt_generator(model, user_query)
         response = agent.invoke({'messages':[{'role':"user",
