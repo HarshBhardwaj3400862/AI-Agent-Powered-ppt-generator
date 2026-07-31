@@ -121,9 +121,10 @@ if all(ALL_API) and user_query:
   #==============with tabs======================
   with tab1:
     st.header("GENERATE IMAGE GIVE PROMPT")
-    if st.button("click to generate:"): ", key = "generate_img_button"):
+    if st.button("click to generate:" , key = "generate_img_button"):
       with st.spinner("RUNNING AGENT"):
         data = f"url = https://image.pollinations.ai/{user_query}"
+        time.sleep(3)
         st.image(data)
         
   
@@ -154,11 +155,11 @@ if all(ALL_API) and user_query:
   
   st.html(code, width = "stretch",
           unsafe_allow_javascript = True)
-  st.download button(label = "DOWNLOAD PPT",
+  if st.download button(label = "DOWNLOAD PPT",
                      data = code,
                      file_name = ppt.html
-                     mine = 'text/html')
+                     mine = 'text/html'):
   
-                     st.success("PPT DOWNLOADED SUUCCESSFULLY")
+    st.success("PPT DOWNLOADED SUUCCESSFULLY")
   
 
