@@ -32,7 +32,7 @@ elif any(ALL_API):
   st.sidebar.info("MUST PASS ALL KEYS")
 
 else:
-st.sidebar.success("API KEYS LOADED SUCCESSFULLY")
+  st.sidebar.success("API KEYS LOADED SUCCESSFULLY")
 # STEP1: MODEL CALL
 model = ChatGoogleGenerativeAI(
   model = "gemini-3.5-flash lite",
