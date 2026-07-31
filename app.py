@@ -113,7 +113,7 @@ def prompt_generator(model,query):
 agent = create_agent(
 model = model,
 tools = [search_latest_info,
-          generate image]
+          generate_image]
          )
 # ==================display agent====================
 st.sidebar.image(agent)
