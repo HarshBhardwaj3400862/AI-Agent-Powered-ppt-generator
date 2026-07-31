@@ -157,7 +157,7 @@ if all(ALL_API) and user_query:
           unsafe_allow_javascript = True)
   if st.download_button(label = "DOWNLOAD PPT",
                      data = code,
-                     file_name = ppt.html
+                     file_name = ppt.html,
                      mine = 'text/html'):
   
     st.success("PPT DOWNLOADED SUUCCESSFULLY")
