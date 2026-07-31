@@ -28,17 +28,17 @@ ALL_API = [GOOGLE_KEY,   GROQ_KEY,  TAVILY_KEY]
 if not all(ALL_API):
   st.sidebar.error("PASS API-KEYS")
 
-elif any(ALL_API):
-  st.sidebar.info("MUST PASS ALL KEYS")
-
-else:
-  st.sidebar.success("API KEYS LOADED SUCCESSFULLY")
-# STEP1: MODEL CALL
-model = ChatGoogleGenerativeAI(
+elif all(ALL_API):
+  model = ChatGoogleGenerativeAI(
   model = "gemini-3.5-flash lite",
   google_api_key = GOOGLE_API_KEY
 )
+  st.sidebar.success("API KEYS LOADED SUCCESSFULLY")
+elif any(all_API):
+  st.sidebar.info("must pass all api keys")
 
+else:
+  st.info("loaded")
 
 #===========FRONTEND=========================
 st.title("AI-Agent-Powered-ppt Generator")
