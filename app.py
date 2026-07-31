@@ -162,8 +162,8 @@ if all(ALL_API) and user_query:
         if st.download_button(label = "DOWNLOAD PPT",
                            data = code,
                            file_name = ppt.html,
-                           mine = 'text/html'):
-        
+                           mime = 'text/html'):
+           
           st.success("PPT DOWNLOADED SUUCCESSFULLY")
   
 
