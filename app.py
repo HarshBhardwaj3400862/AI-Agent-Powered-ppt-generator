@@ -110,11 +110,12 @@ def prompt_generator(model,query):
     f.write(final_prompt)
   return final_prompt
 if all(ALL_API) and user_query:
+  
   agent = create_agent(
-  model = model,
-  tools = [search_latest_info,
-            generate_image]
-           )
+    model = model,
+    tools = [search_latest_info,
+              generate_image]
+             )
   # ==================display agent====================
   #st.sidebar.image(agent)
   
